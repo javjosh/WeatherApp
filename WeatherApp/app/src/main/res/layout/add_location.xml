@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/locationInput"
+        android:layout_width="226dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="15"
+        android:hint="Enter a Location"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/nextButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.193" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="96dp"
+        android:layout_height="59dp"
+        android:text="Next"
+        android:onClick="doQuery"
+        app:layout_constraintBottom_toBottomOf="@+id/locationInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.36"
+        app:layout_constraintStart_toEndOf="@+id/locationInput"
+        app:layout_constraintTop_toTopOf="@+id/locationInput" />
+
+    <TextView
+        android:id="@+id/allowedInputText"
+        android:layout_width="407dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="56dp"
+        android:gravity="center_horizontal"
+        android:text="Input Accepted:
+        \n
+        \n        Latitude and Longitude (Dec. degree) e.g: 48.8567,2.3508
+        \nCity name e.g.: Paris
+        \nUS zip e.g.: 10001
+        \nUK postcode e.g: SW1
+        \nCanada postal code e.g: G2J
+        \nmetar: e.g: metar:EGLL
+        \niata: e.g: iata:DXB
+        \nauto:ip IP lookup e.g: auto:ip
+        \nIP address (IPv4 and IPv6 supported) e.g: 100.0.0.1"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationInput" />
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="258dp"
+        android:layout_height="52dp"
+        android:gravity="center"
+        android:text=""
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/locationInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
